@@ -119,12 +119,12 @@ def main(json_path='options/train_dncnn.json'):
                                       shuffle=dataset_opt['dataloader_shuffle'],
                                       num_workers=dataset_opt['dataloader_num_workers'],
                                       drop_last=True,
-                                      pin_memory=True)
+                                      pin_memory=False)
         elif phase == 'test':
             test_set = define_Dataset(dataset_opt)
             test_loader = DataLoader(test_set, batch_size=1,
                                      shuffle=False, num_workers=1,
-                                     drop_last=False, pin_memory=True)
+                                     drop_last=False, pin_memory=False)
         else:
             raise NotImplementedError("Phase [%s] is not recognized." % phase)
 

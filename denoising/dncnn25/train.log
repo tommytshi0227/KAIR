@@ -1,0 +1,552 @@
+21-04-05 19:36:02.240 :   task: dncnn25
+  model: plain
+  gpu_ids: [0]
+  scale: 1
+  n_channels: 1
+  sigma: 25
+  sigma_test: 25
+  merge_bn: True
+  merge_bn_startpoint: 400000
+  path:[
+    root: denoising
+    pretrained_netG: None
+    task: denoising/dncnn25
+    log: denoising/dncnn25
+    options: denoising/dncnn25/options
+    models: denoising/dncnn25/models
+    images: denoising/dncnn25/images
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: dncnn
+      dataroot_H: trainsets/trainH
+      dataroot_L: None
+      H_size: 40
+      dataloader_shuffle: True
+      dataloader_num_workers: 8
+      dataloader_batch_size: 64
+      phase: train
+      scale: 1
+      n_channels: 1
+    ]
+    test:[
+      name: test_dataset
+      dataset_type: dncnn
+      dataroot_H: testsets/set12
+      dataroot_L: None
+      phase: test
+      scale: 1
+      n_channels: 1
+    ]
+  ]
+  netG:[
+    net_type: dncnn
+    in_nc: 1
+    out_nc: 1
+    nc: 64
+    nb: 17
+    gc: 32
+    ng: 2
+    reduction: 16
+    act_mode: BR
+    upsample_mode: convtranspose
+    downsample_mode: strideconv
+    init_type: orthogonal
+    init_bn_type: uniform
+    init_gain: 0.2
+    scale: 1
+  ]
+  train:[
+    G_lossfn_type: l1
+    G_lossfn_weight: 1.0
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_optimizer_clipgrad: None
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [200000, 400000, 600000, 800000, 1000000, 2000000]
+    G_scheduler_gamma: 0.5
+    G_regularizer_orthstep: None
+    G_regularizer_clipstep: None
+    checkpoint_test: 5000
+    checkpoint_save: 5000
+    checkpoint_print: 200
+  ]
+  opt_path: options/train_dncnn.json
+  is_train: True
+
+21-04-05 19:36:02.241 : Random seed: 7603
+21-04-05 19:36:02.254 : Number of train images: 3, iters: 1
+21-04-05 20:27:45.100 :   task: dncnn25
+  model: plain
+  gpu_ids: [0]
+  scale: 1
+  n_channels: 1
+  sigma: 25
+  sigma_test: 25
+  merge_bn: True
+  merge_bn_startpoint: 400000
+  path:[
+    root: denoising
+    pretrained_netG: None
+    task: denoising/dncnn25
+    log: denoising/dncnn25
+    options: denoising/dncnn25/options
+    models: denoising/dncnn25/models
+    images: denoising/dncnn25/images
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: dncnn
+      dataroot_H: trainsets/trainH
+      dataroot_L: None
+      H_size: 40
+      dataloader_shuffle: True
+      dataloader_num_workers: 8
+      dataloader_batch_size: 64
+      phase: train
+      scale: 1
+      n_channels: 1
+    ]
+    test:[
+      name: test_dataset
+      dataset_type: dncnn
+      dataroot_H: testsets/set12
+      dataroot_L: None
+      phase: test
+      scale: 1
+      n_channels: 1
+    ]
+  ]
+  netG:[
+    net_type: dncnn
+    in_nc: 1
+    out_nc: 1
+    nc: 64
+    nb: 17
+    gc: 32
+    ng: 2
+    reduction: 16
+    act_mode: BR
+    upsample_mode: convtranspose
+    downsample_mode: strideconv
+    init_type: orthogonal
+    init_bn_type: uniform
+    init_gain: 0.2
+    scale: 1
+  ]
+  train:[
+    G_lossfn_type: l1
+    G_lossfn_weight: 1.0
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_optimizer_clipgrad: None
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [200000, 400000, 600000, 800000, 1000000, 2000000]
+    G_scheduler_gamma: 0.5
+    G_regularizer_orthstep: None
+    G_regularizer_clipstep: None
+    checkpoint_test: 5000
+    checkpoint_save: 5000
+    checkpoint_print: 200
+  ]
+  opt_path: options/train_dncnn.json
+  is_train: True
+
+21-04-05 20:27:45.101 : Random seed: 2639
+21-04-05 20:27:45.104 : Number of train images: 3, iters: 1
+21-04-05 22:33:01.602 :   task: dncnn25
+  model: plain
+  gpu_ids: [0]
+  scale: 1
+  n_channels: 1
+  sigma: 25
+  sigma_test: 25
+  merge_bn: True
+  merge_bn_startpoint: 400000
+  path:[
+    root: denoising
+    pretrained_netG: None
+    task: denoising/dncnn25
+    log: denoising/dncnn25
+    options: denoising/dncnn25/options
+    models: denoising/dncnn25/models
+    images: denoising/dncnn25/images
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: dncnn
+      dataroot_H: trainsets/trainH
+      dataroot_L: None
+      H_size: 40
+      dataloader_shuffle: True
+      dataloader_num_workers: 8
+      dataloader_batch_size: 64
+      phase: train
+      scale: 1
+      n_channels: 1
+    ]
+    test:[
+      name: test_dataset
+      dataset_type: dncnn
+      dataroot_H: testsets/set12
+      dataroot_L: None
+      phase: test
+      scale: 1
+      n_channels: 1
+    ]
+  ]
+  netG:[
+    net_type: dncnn
+    in_nc: 1
+    out_nc: 1
+    nc: 64
+    nb: 17
+    gc: 32
+    ng: 2
+    reduction: 16
+    act_mode: BR
+    upsample_mode: convtranspose
+    downsample_mode: strideconv
+    init_type: orthogonal
+    init_bn_type: uniform
+    init_gain: 0.2
+    scale: 1
+  ]
+  train:[
+    G_lossfn_type: l1
+    G_lossfn_weight: 1.0
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_optimizer_clipgrad: None
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [200000, 400000, 600000, 800000, 1000000, 2000000]
+    G_scheduler_gamma: 0.5
+    G_regularizer_orthstep: None
+    G_regularizer_clipstep: None
+    checkpoint_test: 5000
+    checkpoint_save: 5000
+    checkpoint_print: 200
+  ]
+  opt_path: options/train_dncnn.json
+  is_train: True
+
+21-04-05 22:33:01.602 : Random seed: 6358
+21-04-05 22:33:01.607 : Number of train images: 3, iters: 1
+21-04-05 22:35:53.918 :   task: dncnn25
+  model: plain
+  gpu_ids: [0]
+  scale: 1
+  n_channels: 1
+  sigma: 25
+  sigma_test: 25
+  merge_bn: True
+  merge_bn_startpoint: 400000
+  path:[
+    root: denoising
+    pretrained_netG: None
+    task: denoising/dncnn25
+    log: denoising/dncnn25
+    options: denoising/dncnn25/options
+    models: denoising/dncnn25/models
+    images: denoising/dncnn25/images
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: dncnn
+      dataroot_H: trainsets/trainH
+      dataroot_L: None
+      H_size: 40
+      dataloader_shuffle: True
+      dataloader_num_workers: 8
+      dataloader_batch_size: 64
+      phase: train
+      scale: 1
+      n_channels: 1
+    ]
+    test:[
+      name: test_dataset
+      dataset_type: dncnn
+      dataroot_H: testsets/set12
+      dataroot_L: None
+      phase: test
+      scale: 1
+      n_channels: 1
+    ]
+  ]
+  netG:[
+    net_type: dncnn
+    in_nc: 1
+    out_nc: 1
+    nc: 64
+    nb: 17
+    gc: 32
+    ng: 2
+    reduction: 16
+    act_mode: BR
+    upsample_mode: convtranspose
+    downsample_mode: strideconv
+    init_type: orthogonal
+    init_bn_type: uniform
+    init_gain: 0.2
+    scale: 1
+  ]
+  train:[
+    G_lossfn_type: l1
+    G_lossfn_weight: 1.0
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_optimizer_clipgrad: None
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [200000, 400000, 600000, 800000, 1000000, 2000000]
+    G_scheduler_gamma: 0.5
+    G_regularizer_orthstep: None
+    G_regularizer_clipstep: None
+    checkpoint_test: 5000
+    checkpoint_save: 5000
+    checkpoint_print: 200
+  ]
+  opt_path: options/train_dncnn.json
+  is_train: True
+
+21-04-05 22:35:53.919 : Random seed: 9848
+21-04-05 22:42:29.258 :   task: dncnn25
+  model: plain
+  gpu_ids: [0]
+  scale: 1
+  n_channels: 1
+  sigma: 25
+  sigma_test: 25
+  merge_bn: True
+  merge_bn_startpoint: 400000
+  path:[
+    root: denoising
+    pretrained_netG: None
+    task: denoising/dncnn25
+    log: denoising/dncnn25
+    options: denoising/dncnn25/options
+    models: denoising/dncnn25/models
+    images: denoising/dncnn25/images
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: dncnn
+      dataroot_H: trainsets/trainH
+      dataroot_L: None
+      H_size: 40
+      dataloader_shuffle: True
+      dataloader_num_workers: 8
+      dataloader_batch_size: 64
+      phase: train
+      scale: 1
+      n_channels: 1
+    ]
+    test:[
+      name: test_dataset
+      dataset_type: dncnn
+      dataroot_H: testsets/set12
+      dataroot_L: None
+      phase: test
+      scale: 1
+      n_channels: 1
+    ]
+  ]
+  netG:[
+    net_type: dncnn
+    in_nc: 1
+    out_nc: 1
+    nc: 64
+    nb: 17
+    gc: 32
+    ng: 2
+    reduction: 16
+    act_mode: BR
+    upsample_mode: convtranspose
+    downsample_mode: strideconv
+    init_type: orthogonal
+    init_bn_type: uniform
+    init_gain: 0.2
+    scale: 1
+  ]
+  train:[
+    G_lossfn_type: l1
+    G_lossfn_weight: 1.0
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_optimizer_clipgrad: None
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [200000, 400000, 600000, 800000, 1000000, 2000000]
+    G_scheduler_gamma: 0.5
+    G_regularizer_orthstep: None
+    G_regularizer_clipstep: None
+    checkpoint_test: 5000
+    checkpoint_save: 5000
+    checkpoint_print: 200
+  ]
+  opt_path: options/train_dncnn.json
+  is_train: True
+
+21-04-05 22:42:29.258 : Random seed: 3503
+21-04-05 22:42:29.263 : Number of train images: 3, iters: 1
+21-04-05 23:13:35.341 :   task: dncnn25
+  model: plain
+  gpu_ids: [0]
+  scale: 1
+  n_channels: 1
+  sigma: 25
+  sigma_test: 25
+  merge_bn: True
+  merge_bn_startpoint: 400000
+  path:[
+    root: denoising
+    pretrained_netG: None
+    task: denoising/dncnn25
+    log: denoising/dncnn25
+    options: denoising/dncnn25/options
+    models: denoising/dncnn25/models
+    images: denoising/dncnn25/images
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: dncnn
+      dataroot_H: trainsets/trainH
+      dataroot_L: None
+      H_size: 40
+      dataloader_shuffle: True
+      dataloader_num_workers: 8
+      dataloader_batch_size: 64
+      phase: train
+      scale: 1
+      n_channels: 1
+    ]
+    test:[
+      name: test_dataset
+      dataset_type: dncnn
+      dataroot_H: testsets/set12
+      dataroot_L: None
+      phase: test
+      scale: 1
+      n_channels: 1
+    ]
+  ]
+  netG:[
+    net_type: dncnn
+    in_nc: 1
+    out_nc: 1
+    nc: 64
+    nb: 17
+    gc: 32
+    ng: 2
+    reduction: 16
+    act_mode: BR
+    upsample_mode: convtranspose
+    downsample_mode: strideconv
+    init_type: orthogonal
+    init_bn_type: uniform
+    init_gain: 0.2
+    scale: 1
+  ]
+  train:[
+    G_lossfn_type: l1
+    G_lossfn_weight: 1.0
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_optimizer_clipgrad: None
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [200000, 400000, 600000, 800000, 1000000, 2000000]
+    G_scheduler_gamma: 0.5
+    G_regularizer_orthstep: None
+    G_regularizer_clipstep: None
+    checkpoint_test: 5000
+    checkpoint_save: 5000
+    checkpoint_print: 200
+  ]
+  opt_path: options/train_dncnn.json
+  is_train: True
+
+21-04-05 23:13:35.342 : Random seed: 8943
+21-04-05 23:13:35.348 : Number of train images: 3, iters: 1
+21-04-05 23:44:56.155 :   task: dncnn25
+  model: plain
+  gpu_ids: []
+  scale: 1
+  n_channels: 1
+  sigma: 25
+  sigma_test: 25
+  merge_bn: True
+  merge_bn_startpoint: 400000
+  path:[
+    root: denoising
+    pretrained_netG: None
+    task: denoising/dncnn25
+    log: denoising/dncnn25
+    options: denoising/dncnn25/options
+    models: denoising/dncnn25/models
+    images: denoising/dncnn25/images
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: dncnn
+      dataroot_H: trainsets/trainH
+      dataroot_L: None
+      H_size: 40
+      dataloader_shuffle: True
+      dataloader_num_workers: 8
+      dataloader_batch_size: 64
+      phase: train
+      scale: 1
+      n_channels: 1
+    ]
+    test:[
+      name: test_dataset
+      dataset_type: dncnn
+      dataroot_H: testsets/set12
+      dataroot_L: None
+      phase: test
+      scale: 1
+      n_channels: 1
+    ]
+  ]
+  netG:[
+    net_type: dncnn
+    in_nc: 1
+    out_nc: 1
+    nc: 64
+    nb: 17
+    gc: 32
+    ng: 2
+    reduction: 16
+    act_mode: BR
+    upsample_mode: convtranspose
+    downsample_mode: strideconv
+    init_type: orthogonal
+    init_bn_type: uniform
+    init_gain: 0.2
+    scale: 1
+  ]
+  train:[
+    G_lossfn_type: l1
+    G_lossfn_weight: 1.0
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_optimizer_clipgrad: None
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [200000, 400000, 600000, 800000, 1000000, 2000000]
+    G_scheduler_gamma: 0.5
+    G_regularizer_orthstep: None
+    G_regularizer_clipstep: None
+    checkpoint_test: 5000
+    checkpoint_save: 5000
+    checkpoint_print: 200
+  ]
+  opt_path: options/train_dncnn.json
+  is_train: True
+
+21-04-05 23:44:56.156 : Random seed: 7615
+21-04-05 23:44:56.158 : Number of train images: 3, iters: 1
